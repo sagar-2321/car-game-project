@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.baground {
+    height: 100vh;
+    width: 800%;
+    background-image: url(bg.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    position: relative;
+    overflow: hidden ;
+}
+.bagroundAni{
+    animation: translate 10s linear infinite;
+    
+}
+.gameover{
+    
+    font-size: larger;
+    font-weight: 200;
+     background-color: #01a2e4;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.score{
+    
+    text-decoration: solid;
+    border: solid black;
+    background-color:#01a2e4;
+}
+
+.track{
+    height:20vh;
+    width: 800%;
+    /* display: grid;
+    align-items: center;
+    justify-content: center; */
+    overflow:hidden;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom:-38px;
+}
+.trackAni{
+    animation: translate 15s linear infinite;
+
+}
+.pathole{
+    height: 150px;
+width: 199px;
+background-image: url(pathole1.png);
+overflow: hidden;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+bottom: 46px;
+left: 1000px;
+display: flex;
+align-content: center;
+justify-content: center;
+}
+.patholeAni{
+    animation: translate1 15s linear infinite; 
+
+}
+.car{
+    height: 87px;
+width: 280px;
+background-size: cover;
+overflow: hidden;
+background-repeat: no-repeat;
+background-image: url(car_body.png);
+position: absolute;
+bottom: 68px;
+left: 100px;
+  
+}
+.animatecar{
+    animation: carjump 1s linear 1;
+}
+.wheel1 img{
+    height: 65px;
+    width: 60px;
+    background-size: contain;
+    /* background-image: url(car_wheel_right.png); */
+    position: absolute;
+    left: 34px;
+    top: 28px;
+    background-repeat: no-repeat;
+    /* animation: wheelrotation .1s linear infinite; */
+}
+.wheel2 img{
+    height: 60px;
+    width: 55px;
+    background-size: contain;
+    /* background-image: url(car_wheel_right.png); */
+    position: absolute;
+    left: 193px;
+    top: 33px;
+    background-repeat: no-repeat;
+}
+.wheelAni{
+    animation: wheelrotation .1s linear infinite;
+
+}
+@keyframes wheelrotation {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+ @keyframes translate { 
+    100%{
+        transform: translateX(-130vw);
+    }
+    
+} 
+@keyframes translate1 { 
+    0%{
+       left:1500px;
+    }
+    50%{
+     left: 500px;
+    }
+    100%{
+     left: -1000px;
+    }
+}
+@keyframes carjump {
+    0%{
+        bottom: 87px;
+    }
+    50%{
+       bottom: 400px;
+      
+    }
+    100%{
+        bottom: 87px;
+        
+    }
+    
+}
